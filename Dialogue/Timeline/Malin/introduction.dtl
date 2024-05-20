@@ -1,0 +1,31 @@
+Join malin 2
+malin: Hmm?
+malin: Oh... so you're the one that got the job? Out of the applicants we got, your CV did make it seem like you know your way around a kitchen.
+malin: You say the kitchen is a mess? Nah, I was just making sure you had everything you needed.
+malin: (Definitely didn't forget.)
+malin: You would appreciate a clean workspace? Hey! I'm only down here cause Andromeda took over comms for me for a sec.
+[label name="Choice"]
+malin: Speaking of... whatcha make her?
+- Who are you?
+	malin: Malin, comms person. I kinda do organisation n' stuff.
+	[jump timeline="" label="Choice"]
+- Bagel Sandwich
+	malin: Huh. Okay, that was a good enough test I suppose.
+- Seven Layer Ice-cream Cake
+	malin: No way. You have to be lying.
+	malin: (Though... that would be so good right about now...)
+- None of your business.
+	malin: ...
+	malin: Do you want to keep that job of yours?
+	malin: (REALLY should've hired the dishwasher guy instead.)
+malin: Since I'm here, I'm going to challenge you, Tomato Soup. Can you do that?
+malin: Hm… the ingredients if I remember is to make the puree or whatever it's called first. Two tomatoes and salt in that order.
+[signal arg="add_recipe|Tomato Purée|Tomato>Tomato>Salt"]
+malin: Then you combine the puree or whatever with something else. I dunno. Good luck I suppose.
+[signal arg="add_recipe|Tomato Soup|Tomato Purée>?"]
+malin: Then again… you could always ask Andromeda for help when she's around.
+malin: Anyway, I'm gonna stay here for now. You better not make me wait too long.
+Leave malin
+[signal arg="Malin_show_character"]
+[end_timeline]
+

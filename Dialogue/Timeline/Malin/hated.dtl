@@ -1,0 +1,17 @@
+Join malin 2
+malin: What is that? It looks… interesting?
+malin: Ah… welp. Here goes nothing.
+malin: (Munch, munch, munch, gulp!)
+[wait]
+malin: WHAT THE HELL WAS THAT?
+malin: YOU CAN’T GO AROUND FEEDING PEOPLE POISON YOU IDIOT!
+[wait]
+malin: *Sigh*
+malin: I’m really sorry. I didn’t mean to yell at you like that.
+malin: Just. Try something better next time, cuz’ I gotta run back to comms.
+malin: Goodbye.
+Leave malin
+[signal arg="next_scene"]
+[signal arg="hated_food"]
+[end_timeline]
+

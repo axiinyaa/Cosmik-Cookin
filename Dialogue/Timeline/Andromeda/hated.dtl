@@ -1,0 +1,13 @@
+Join Andromeda 2
+Andromeda: Time for a taste test rookie!
+Andromeda: (Chew, munch munch, gulp!)
+Andromeda: Groan... (My stomach! I can’t feel my stomach!)
+Andromeda: That was…
+Andromeda: Uh...
+Andromeda: Something...
+Andromeda: You followed my instructions right?
+Andromeda: Maybe give it another go.
+Leave Andromeda
+[signal arg="move_to_kitchen"]
+[end_timeline]
+

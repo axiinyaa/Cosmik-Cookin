@@ -1,0 +1,14 @@
+Join malin 2
+malin: Hey, dude. Waiting for your food, I got things to do.
+malin: Um... do you need like, a refresher or something?
+- Tomato Soup?
+	malin: *Sigh* Alright just for you then. Two tomatoes and salt, then combine that with something else.
+	malin: I don’t remember the last ingredient so you have to work that out.
+	malin: If you can't do it, I'll just eat what Andromeda got. The bagel sandwich if I recall.
+	malin: But once again, you can just ask her for help when she's available. She is pretty useful to be around.
+- I'm Okay.
+	malin: Alright then.
+Leave malin
+[signal arg="Malin_show_character"]
+[end_timeline]
+

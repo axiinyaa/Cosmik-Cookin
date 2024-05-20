@@ -1,0 +1,25 @@
+Join Andromeda 2 [animation="Bounce In" wait="true"]
+Andromeda: Oh, hey there!
+Andromeda: You just started your new shift?
+Andromeda: Ah... I know it's a bit crummy, but it's what we call home haha!
+Andromeda: I'm the Captain, names Andromeda.
+[label name="choice"]
+Andromeda: Want me to show you the ropes?
+- No Thanks.
+	Andromeda: Trust me... you really want the tutorial, this place is a complete mess....
+	Andromeda: (I'm not kidding, geez maybe I should’ve told Malin to clean before you arrived...)
+	Andromeda: Are you sure?
+	- Yes
+		Andromeda: Okay then..! Good luck rookie!
+		Leave Andromeda
+		[signal arg="andromeda_tip_jar"]
+		[signal arg="malin_section"]
+		[end_timeline]
+	- Go back
+		[jump label="choice"]
+- Yes please!
+Andromeda: Alright then, let's get started! First task\: a [color=light_blue]Bagel Sandwich[/color]!
+Leave Andromeda
+[signal arg="move_to_kitchen"]
+[end_timeline]
+

@@ -1,0 +1,16 @@
+Join Mayall 2
+Mayall: *Gasp* Is that the chocolate?
+Mayall: YES! I've been waiting for this!
+Mayall: (Om, nom, nom, nom)
+Mayall: [wave]IT'S SOOOOO GOOD!
+Mayall: The sweetness from the sugar and the slight balancing of the salt added to it is perfect!
+Mayall: You know what this would be [shake]AMAZING on? Cookies!
+Mayall: Ahh... but I don't know how to make them... I'm sorry...
+Mayall: But... if you figured out how to make this chocolate I think you can work it out!
+[signal arg="add_recipe|Cookies|Chocolate>?>?"]
+Mayall: Thank you so much! I gotta tell everyone about this!
+Leave Mayall
+[signal arg="andromeda_tip_jar"]
+[signal arg="mayall_section_two"]
+[end_timeline]
+

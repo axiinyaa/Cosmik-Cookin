@@ -1,0 +1,21 @@
+Join Andromeda 2
+if {Has_Messed_Up} == "false":
+	Andromeda: For this first recipe, I've left out everything you should need for it.
+	Andromeda: We don’t have a whole lot of ingredients here on the ship so be careful what stuff you use.
+	Andromeda: To make meals on the ship like Bagel Sandwiches, you wanna pick your ingredients from the right and then drag them into the handy dandy cook-o-matic over there to your left.
+	Andromeda: Just remember to be somewhat sensible with the order that you put these things in, the cook-o-matic can be a bit sensitive, older model and all.
+	Andromeda: If I remember correctly... You need to make the [color=light_blue]dough[/color] first, which consists of [color=light_blue]Flour[/color]... Um... Ah...
+	Andromeda: I'm so sorry... It just escaped my mind what the [color=orange]middle ingredient[/color] was!
+	Andromeda: But i'm pretty sure the [color=orange]last ingredient[/color] is [color=light_blue]salt[/color]. I'm sure you can figure out what that other ingredient was.
+	[signal arg="add_recipe|Dough|Flour>?>Salt"]
+	Andromeda: Then to finally make the sandwich, you need to combine the [color=light_blue]dough[/color] with [color=light_blue]meat[/color] afterwards.
+	[signal arg="add_recipe|Bagel Sandwich|Dough>Meat"]
+	Andromeda: And there you go! (If you followed my instructions) a [wave]tasty [color=light_blue]Bagel Sandwich[/color][/wave] in a couple seconds!
+	Andromeda: Oh! And don't forget to check out the [color=orange]Recipe Book[/color] on the top left. It will automatically update with recipes whenever someone tells you a recipe, or if you've successfully cooked something!
+	Andromeda: When you're ready to present me with your dish, simply press on the [color=orange]Move To Lounge[/color] button on the top right while carrying the finished dish.
+Andromeda: Good luck, rookie!
+Leave Andromeda
+[signal arg="Andromeda _show_character"]
+VAR {Has_Messed_Up} = "true"
+[end_timeline]
+

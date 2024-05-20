@@ -1,0 +1,415 @@
+[gd_scene load_steps=39 format=3 uid="uid://dvete3j8oivjl"]
+
+[ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_fwxms"]
+[ext_resource type="PackedScene" uid="uid://cjmcrs01enx7" path="res://UI/phone.tscn" id="2_4n1ts"]
+[ext_resource type="Shader" path="res://HueShift.gdshader" id="3_24ndh"]
+[ext_resource type="Texture2D" uid="uid://cqw64l8sml5y3" path="res://icon.svg" id="7_5n8dd"]
+[ext_resource type="PackedScene" uid="uid://dbsg3f64fdm8x" path="res://Characters/character.tscn" id="7_55eof"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Andromeda/introduction.dtl" id="8_gtdq4"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Andromeda/loved.dtl" id="8_mq7x2"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Andromeda/hated.dtl" id="9_3twui"]
+[ext_resource type="PackedScene" uid="uid://bdaup8us6indt" path="res://UI/cooking_machine.tscn" id="9_r80vj"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Andromeda/normal.dtl" id="10_xav0k"]
+[ext_resource type="Texture2D" uid="uid://k8ptppwj1a11" path="res://Textures/Characters/Malin.PNG" id="11_iuqtc"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Malin/loved.dtl" id="11_qtbod"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Malin/introduction.dtl" id="12_gt42t"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Malin/liked.dtl" id="12_vuikq"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Malin/hated.dtl" id="13_fkex4"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/AndromedaNormal/liked.dtl" id="13_ojcp6"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Malin/normal.dtl" id="14_fpwv2"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/AndromedaNormal/hated.dtl" id="14_xxqbu"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/AndromedaNormal/normal.dtl" id="15_h2f3p"]
+[ext_resource type="AudioStream" uid="uid://cndyrtyweu5xf" path="res://Audio/Music/Andromeda.mp3" id="18_kgq0y"]
+[ext_resource type="PackedScene" uid="uid://b7tr8b6m7vq47" path="res://UI/Tip Jar.tscn" id="19_d8ml0"]
+[ext_resource type="Texture2D" uid="uid://c1vuf72wugiep" path="res://Textures/Backgrounds/kitchen.png" id="20_ytoph"]
+[ext_resource type="Texture2D" uid="uid://bedj5fe76kjc3" path="res://Textures/Characters/Mayall.PNG" id="22_ahk3i"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Mayall/introduction.dtl" id="22_vcbrm"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Mayall/loved.dtl" id="23_etvbp"]
+[ext_resource type="Texture2D" uid="uid://d1j044hqm14d6" path="res://Textures/Backgrounds/Summer Slow Jam 23 - Narrative _ doomsday.png" id="24_4x85g"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Mayall/liked.dtl" id="24_dfw2e"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Mayall/hated.dtl" id="25_dvia4"]
+[ext_resource type="Resource" path="res://Dialogue/Timeline/Mayall/normal.dtl" id="26_i4hta"]
+[ext_resource type="PackedScene" uid="uid://d0o2qxdm28awm" path="res://UI/recipe_book.tscn" id="28_fn0pi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kpdty"]
+resource_local_to_scene = true
+shader = ExtResource("3_24ndh")
+shader_parameter/is_on = true
+shader_parameter/is_on_green = false
+shader_parameter/is_on_red = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_en5af"]
+size = Vector2(130.032, 153)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_m5iyh"]
+
+[sub_resource type="Animation" id="Animation_gubtv"]
+resource_name = "fade_to_black"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainGame/Fade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gb5l2"]
+resource_name = "fade_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainGame/Fade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ky81"]
+_data = {
+"fade_in": SubResource("Animation_gubtv"),
+"fade_out": SubResource("Animation_gb5l2")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_ekj0f"]
+font_size = 80
+
+[sub_resource type="LabelSettings" id="LabelSettings_fm52j"]
+font_size = 40
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_fwxms")
+
+[node name="MainGame" type="Node2D" parent="."]
+
+[node name="Kitchen" type="Node2D" parent="MainGame"]
+visible = false
+
+[node name="Background" type="Sprite2D" parent="MainGame/Kitchen"]
+modulate = Color(0.784314, 0.784314, 0.784314, 1)
+position = Vector2(6.15091, -87.0381)
+scale = Vector2(0.524474, 0.524473)
+texture = ExtResource("20_ytoph")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MainGame/Kitchen"]
+position = Vector2(18, 327)
+scale = Vector2(37.84, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainGame/Kitchen/StaticBody2D"]
+material = SubResource("ShaderMaterial_kpdty")
+position = Vector2(-0.36998, 344)
+shape = SubResource("RectangleShape2D_en5af")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainGame/Kitchen/StaticBody2D/CollisionShape2D"]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("7_5n8dd")
+
+[node name="Cooking Machine" parent="MainGame/Kitchen" node_paths=PackedStringArray("game") instance=ExtResource("9_r80vj")]
+position = Vector2(-550, 685)
+game = NodePath("../../..")
+
+[node name="SpawnedObjects" type="Node2D" parent="MainGame/Kitchen"]
+position = Vector2(548, -408)
+
+[node name="Phone" parent="MainGame/Kitchen" node_paths=PackedStringArray("game") instance=ExtResource("2_4n1ts")]
+visible = false
+offset_left = 155.0
+offset_top = 577.0
+offset_right = 155.0
+offset_bottom = 577.0
+scale = Vector2(1.72972, 1.72972)
+game = NodePath("../../..")
+
+[node name="Panel" parent="MainGame/Kitchen/Phone" index="0"]
+offset_top = 0.0
+offset_bottom = 862.0
+
+[node name="GoToCounter" type="Control" parent="MainGame/Kitchen"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 635.0
+offset_top = -701.0
+offset_right = 1141.0
+offset_bottom = -585.0
+
+[node name="Button" type="Button" parent="MainGame/Kitchen/GoToCounter"]
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 61.0
+scale = Vector2(1.65885, 1.62323)
+text = "Move To Lounge"
+
+[node name="Counter" type="Node2D" parent="MainGame"]
+
+[node name="Background" type="Sprite2D" parent="MainGame/Counter"]
+position = Vector2(65.0659, 8.73857)
+scale = Vector2(0.561603, 0.54351)
+texture = ExtResource("24_4x85g")
+
+[node name="GoToKitchen" type="Control" parent="MainGame/Counter"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 651.0
+offset_top = -705.0
+offset_right = 1157.0
+offset_bottom = -589.0
+
+[node name="Button" type="Button" parent="MainGame/Counter/GoToKitchen"]
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 61.0
+scale = Vector2(1.65885, 1.62323)
+text = "Move To Kitchen"
+
+[node name="Timeskip" type="Control" parent="MainGame/Counter"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 651.0
+offset_top = -606.0
+offset_right = 1157.0
+offset_bottom = -490.0
+
+[node name="Button" type="Button" parent="MainGame/Counter/Timeskip"]
+layout_mode = 0
+offset_left = -839.0
+offset_top = -97.0
+offset_right = -601.0
+offset_bottom = -36.0
+scale = Vector2(1.65885, 1.62323)
+text = "Skip to Next Hour"
+
+[node name="AndromedaTutorial" parent="MainGame/Counter" instance=ExtResource("7_55eof")]
+position = Vector2(229, 165)
+scale = Vector2(0.690029, 0.690029)
+character_name = "Andromeda "
+loves = Array[String](["Bagel Sandwich"])
+introduction = ExtResource("8_gtdq4")
+loved_food = ExtResource("8_mq7x2")
+hated_food = ExtResource("9_3twui")
+normal_dialogue = ExtResource("10_xav0k")
+
+[node name="Andromeda" parent="MainGame/Counter" instance=ExtResource("7_55eof")]
+visible = false
+position = Vector2(229, 165)
+scale = Vector2(0.690029, 0.690029)
+character_name = "Andromeda"
+likes = Array[String](["Tomato Soup"])
+loves = Array[String](["Pizza", "Bagel Sandwich"])
+liked_food = ExtResource("13_ojcp6")
+hated_food = ExtResource("14_xxqbu")
+normal_dialogue = ExtResource("15_h2f3p")
+do_introduction = false
+
+[node name="Malin" parent="MainGame/Counter" instance=ExtResource("7_55eof")]
+visible = false
+position = Vector2(41.9999, 137)
+scale = Vector2(0.827243, 0.827243)
+character_name = "Malin"
+likes = Array[String](["Bagel Sandwich", "Chocolate", "Cookies"])
+loves = Array[String](["Pizza", "Tomato Soup"])
+introduction = ExtResource("12_gt42t")
+loved_food = ExtResource("11_qtbod")
+liked_food = ExtResource("12_vuikq")
+hated_food = ExtResource("13_fkex4")
+normal_dialogue = ExtResource("14_fpwv2")
+
+[node name="CharacterImage" parent="MainGame/Counter/Malin" index="0"]
+position = Vector2(3.8147e-05, 137.807)
+texture = ExtResource("11_iuqtc")
+
+[node name="ToolTip" parent="MainGame/Counter/Malin" index="1"]
+offset_left = -252.646
+offset_top = -626.177
+offset_right = -105.646
+offset_bottom = -584.177
+
+[node name="Mayall" parent="MainGame/Counter" instance=ExtResource("7_55eof")]
+visible = false
+position = Vector2(821, 47)
+scale = Vector2(0.65259, 0.65259)
+character_name = "Mayall"
+likes = Array[String](["Bagel Sandwich", "Tomato Soup"])
+loves = Array[String](["Pizza", "Cookies", "Chocolate"])
+introduction = ExtResource("22_vcbrm")
+loved_food = ExtResource("23_etvbp")
+liked_food = ExtResource("24_dfw2e")
+hated_food = ExtResource("25_dvia4")
+normal_dialogue = ExtResource("26_i4hta")
+
+[node name="CharacterImage" parent="MainGame/Counter/Mayall" index="0"]
+position = Vector2(15.7149, 19.3413)
+texture = ExtResource("22_ahk3i")
+
+[node name="ToolTip" parent="MainGame/Counter/Mayall" index="1"]
+offset_left = -252.646
+offset_top = -626.177
+offset_right = -105.646
+offset_bottom = -584.177
+
+[node name="RecipeBook" parent="MainGame" instance=ExtResource("28_fn0pi")]
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_right = 0.0
+offset_left = -1083.0
+offset_top = 714.0
+offset_right = -1083.0
+offset_bottom = 714.0
+grow_horizontal = 1
+grow_vertical = 0
+
+[node name="Book" parent="MainGame/RecipeBook" index="0"]
+anchors_preset = 9
+anchor_right = 0.0
+offset_left = 17.0
+offset_top = -1292.0
+offset_right = 2137.0
+offset_bottom = -22.0
+grow_horizontal = 1
+
+[node name="Background" parent="MainGame/RecipeBook/Book" index="0"]
+offset_right = 12.0
+offset_bottom = -172.0
+
+[node name="RecipeList" parent="MainGame/RecipeBook/Book" index="1"]
+offset_left = 43.0
+offset_top = 32.0
+offset_right = -10.0
+offset_bottom = -203.0
+
+[node name="Toggle" parent="MainGame/RecipeBook" index="1"]
+offset_left = 1315.0
+offset_top = -1416.0
+offset_right = 1556.0
+offset_bottom = -1356.0
+scale = Vector2(1.65475, 1.59988)
+
+[node name="RecipeNotification" parent="MainGame/RecipeBook" index="2"]
+offset_left = 54.0
+offset_top = -1278.0
+offset_right = 795.0
+offset_bottom = -1228.0
+horizontal_alignment = 0
+
+[node name="Fade" type="Sprite2D" parent="MainGame"]
+visible = false
+modulate = Color(0, 0, 0, 0)
+position = Vector2(88, -14)
+scale = Vector2(3550.25, 1963.25)
+texture = SubResource("PlaceholderTexture2D_m5iyh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainGame/Fade"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_3ky81")
+}
+
+[node name="TitleScreen" type="Node2D" parent="."]
+visible = false
+
+[node name="MainMenu" type="Node2D" parent="TitleScreen"]
+
+[node name="SettingsMenu" type="Node2D" parent="TitleScreen"]
+
+[node name="Settings" type="Control" parent="TitleScreen/SettingsMenu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1154.0
+offset_top = -647.0
+offset_right = 1149.0
+offset_bottom = 648.0
+
+[node name="Panel" type="Panel" parent="TitleScreen/SettingsMenu/Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1040.5
+offset_top = -558.5
+offset_right = 1030.5
+offset_bottom = 537.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="TitleScreen/SettingsMenu/Settings/Panel"]
+layout_mode = 2
+offset_left = 97.0
+offset_top = 97.0
+offset_right = 1969.0
+offset_bottom = 210.0
+text = "Settings"
+label_settings = SubResource("LabelSettings_ekj0f")
+horizontal_alignment = 1
+
+[node name="DialogueSpeed" type="Label" parent="TitleScreen/SettingsMenu/Settings/Panel"]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 319.0
+offset_right = 812.0
+offset_bottom = 415.0
+text = "Dialogue Speed"
+label_settings = SubResource("LabelSettings_fm52j")
+horizontal_alignment = 2
+
+[node name="MenuBar" type="MenuBar" parent="TitleScreen/SettingsMenu/Settings/Panel"]
+layout_mode = 0
+offset_right = 495.0
+offset_bottom = 67.0
+
+[node name="Dialogue Speed" type="PopupMenu" parent="TitleScreen/SettingsMenu/Settings/Panel/MenuBar"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.814928, 1.99487)
+zoom = Vector2(0.5, 0.5)
+
+[node name="PlayerHolding" type="Node2D" parent="."]
+
+[node name="Money" parent="." instance=ExtResource("19_d8ml0")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -1136.0
+offset_top = -704.0
+offset_right = -1136.0
+offset_bottom = -704.0
+grow_horizontal = 0
+grow_vertical = 1
+
+[node name="Container" parent="Money" index="0"]
+offset_left = 0.0
+offset_right = 193.0
+
+[node name="Jar" parent="Money/Container" index="0"]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="AudioStreamPlayer" parent="Money" index="2"]
+volume_db = -80.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_kgq0y")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="MainGame/Kitchen/GoToCounter/Button" to="." method="back_to_counter"]
+[connection signal="pressed" from="MainGame/Counter/GoToKitchen/Button" to="." method="back_to_kitchen"]
+[connection signal="pressed" from="MainGame/Counter/Timeskip/Button" to="." method="timeskip"]
+
+[editable path="MainGame/Kitchen/Phone"]
+[editable path="MainGame/Counter/Malin"]
+[editable path="MainGame/Counter/Mayall"]
+[editable path="MainGame/RecipeBook"]
+[editable path="Money"]

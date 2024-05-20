@@ -1,0 +1,31 @@
+Join Mayall 2
+Mayall: Hey! Hey!
+Mayall: Quickly, what do you think of Malin?
+- Tough but soft
+	Mayall: Correct! They might be a little mean on the outside but truly they care a lot!
+- Mean
+	Mayall: Ah... hm... she might seem that way but she really does care..!
+- Kind
+	Mayall: Correct! Though she might put on a tough front she really does care!
+Mayall: Ah... sorry... didn't mean to jump on you with a question like that!
+Mayall: Just [wave]reaaaallllyy[/wave] wanted to know what you think of them... most people think they're rude and mean...
+Mayall: But it's just not true! Not at all! Nuh uh! Nada!
+Mayall: Ah..! Sorry! Forgot to introduce myself!
+Mayall: The name is Mayall, engineer of the ship! Great to meet you!
+Mayall: Say... sorry if this is too much... but is it possible you could make some chocolate?
+Mayall: I missed it [wave]SOOOOOOOO[/wave] much back when I was on earth!
+Mayall: You gotta combine a [color=light_blue]Cacao bean[/color] with [color=light_blue]Sugar[/color]!
+[signal arg="add_recipe|Chocolate|Cacao Bean>Sugar"]
+Mayall: Bought a Cacao bean on the market today actually, you can have it!
+Leave Mayall
+[i]Mayall quickly runs to the kitchen and places the Cacao bean down.
+[signal arg="give_cacao_bean"]
+Join Mayall 2
+Mayall: It's so weird that chocolate is made from this stuff... it looks so gross...
+Mayall: But I think I can trust you to make it right because I heard Andromeda got excited over the sandwich you made her!
+Mayall: Yeah! I'm gonna stay here. Can't wait for you to make it!
+Mayall: Good luck!
+Leave Mayall
+[signal arg="Mayall_show_character"]
+[end_timeline]
+

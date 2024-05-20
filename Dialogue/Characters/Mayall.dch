@@ -1,0 +1,38 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"color": Color(0.527344, 0.296875, 0.421875, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {
+"talk": {
+"name": "talk",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"sound_folder": "res://Audio/TypingSFX",
+"volume_base": -20.0,
+"volume_variance": 0.0
+}
+},
+"style": ""
+},
+"default_portrait": "New portrait",
+"description": "",
+"display_name": "Mayall",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"New portrait": {
+"ignore_char_scale": false,
+"image": "res://Textures/Characters/Mayall.PNG",
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "",
+"sound_mood": "talk",
+"sound_mood_default": "talk"
+}
+},
+"scale": 1.0
+}

@@ -1,0 +1,16 @@
+Join Andromeda 1
+Andromeda: Woah... I smell pizza... ah! It looks delicious!
+Andromeda: So, you made it? It looks really good!
+Andromeda: It even has vegetables on it!
+Join malin 2
+malin: Damn, isn't that Fresh Basil? Genius move right there.
+malin: Can't wait to dig into this!
+Join Mayall 3
+Mayall: Oh my goodness... is that what I think it is?
+Mayall: I missed pizza so much... I'm so excited for this!
+Andromeda: Thank you for making this! You've managed to gather everyone together!
+[signal arg="fade_in"]
+Leave --All-- 
+[i]And so... as the ship flew across the cosmos, the crew enjoyed the fresh pizza, knowing that their days of cheap, frozen food is now over.
+[i][color=orange]Thanks for playing!
+[signal arg="restart"]

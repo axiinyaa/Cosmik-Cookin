@@ -1,0 +1,15 @@
+Join Andromeda 1
+Andromeda: Wow! The crew seems pretty happy.
+Andromeda: You really did do a good job!
+Andromeda: Thank you so much!
+Join malin 2
+malin: Yeah dude. All the food you've served me is REALLY good.
+malin: Thanks!
+Join Mayall 3
+Mayall: Yoo! The cookies and chocolate were [wave]REALLLY GOOD[/wave].
+Mayall: No more frozen meals for us! Woohoo!
+[signal arg="fade_in"]
+Leave --All-- 
+[i]And so... as the ship flew across the cosmos, you successfully made the crew come closer together and freed them from the curse of cheap, frozen food![/i]
+[i][color=orange]Thanks for playing!
+[signal arg="restart"]

@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0o2qxdm28awm"]
+
+[ext_resource type="Script" path="res://UI/recipe_book.gd" id="1_i3oyy"]
+
+[node name="RecipeBook" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i3oyy")
+
+[node name="Toggle" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -50.0
+offset_right = 161.0
+offset_bottom = -18.0
+grow_vertical = 0
+text = "Recipe Book"
+
+[node name="Book" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 4.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="Book"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.921
+offset_left = 16.0
+offset_top = 14.0
+offset_right = -13.0
+offset_bottom = -16.3571
+
+[node name="RecipeList" type="ScrollContainer" parent="Book"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 35.0
+offset_right = -37.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Recipes" type="VBoxContainer" parent="Book/RecipeList"]
+layout_mode = 2

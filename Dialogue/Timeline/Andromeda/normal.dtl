@@ -1,0 +1,11 @@
+Join Andromeda 2
+Andromeda: (Ah... I can't wait for that sandwich. Finally something other than microwaved food...)
+Andromeda: Wah! You scared me!
+Andromeda: Are you finished...? No? Ah, are you looking for my help?
+Andromeda: The recipe as far as I remember is the dough first, which is made up of [color=light_blue]flour[/color], something else and [color=light_blue]salt[/color].
+Andromeda: Then combine the [color=light_blue]dough[/color] with [color=light_blue]meat[/color]!
+Andromeda: Good luck, rookie!
+Leave Andromeda
+[signal arg="Andromeda _show_character"]
+[end_timeline]
+

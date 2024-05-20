@@ -1,0 +1,11 @@
+Join Andromeda 2
+Andromeda: Ooh..! That looks tasty.
+Andromeda: Time for a taste test!
+Andromeda: (Chew, munch munch, gulp!)
+Andromeda: Woah! That was absolutely delicious!
+Andromeda: (I think I might actually tear up..!)
+Andromeda: *Ahem* well then! Here's your tip! Gotta go back to doing captain duties, thank you!
+[signal arg="tip_jar_loved"]
+[signal arg="next_scene"]
+[end_timeline]
+

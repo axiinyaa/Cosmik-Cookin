@@ -1,0 +1,17 @@
+Join Andromeda 1
+Andromeda: Hey... we really need to talk about your performance...
+Andromeda: I really thought you were the one but...
+Andromeda: I'm going to have to ask you to leav-
+Join malin 2
+malin: [shake]WE'RE KICKING YOU OUT AT THE NEXT SPACE PORT.
+Andromeda: *Ahem* Yes... (please don't be so rude Malin!)
+malin: [shake]NEXT TIME YOU TRY TO POISON US WE'LL KICK YOU INTO DEEP SPACE INSTEAD!
+Join Mayall 3
+Mayall: I actually agree! You're such a meanie! How dare you make us eat worse food than what we had before!?
+Mayall: Grrr... I wanna slap you in the face so bad! But I won't!
+[signal arg="fade_in"]
+Leave --All-- 
+[i]And so... as the ship flew across the cosmos, without you being part of it, the crew continued to eat the cheap, frozen food they had before.
+[i]Which is arguably better than whatever you decided to feed them.
+[i]Thanks for playing?
+[signal arg="restart"]

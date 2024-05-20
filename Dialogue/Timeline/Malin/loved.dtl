@@ -1,0 +1,11 @@
+Join malin 2
+malin: Damn, finally, some good looking food!
+malin: Time to dig in!
+malin: (Munch, munch, munch, gulp!)
+malin: WOAH! Damn good stuff. Well done.
+malin: It really does feel like you’re giving this ship hope, spaceship gruel isn’t that tasty after a while.
+malin: Anyway, Goodbye for now, gotta run back to comms. Thanks for the food.
+Leave malin
+[signal arg="tip_jar_loved"]
+[signal arg="mayall_section"]
+[end_timeline]

@@ -1,0 +1,6 @@
+Join Andromeda 2
+Andromeda: Hey, sorry, I don't really like sweet things...
+Andromeda: Thanks for making it though!
+Leave Andromeda
+[signal arg="Andromeda_show_character"]
+[end_timeline]

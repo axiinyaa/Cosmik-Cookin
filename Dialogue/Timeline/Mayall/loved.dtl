@@ -1,0 +1,13 @@
+Join Mayall 2
+Mayall: Oh hey! What's that?
+Mayall: Oh my gosh! That looks good!
+Mayall: Now if you don't mind...
+Mayall: (Om, nom, nom, nom)
+Mayall: [wave]YES! I was right..!
+Mayall: [shake] IT'S PERFECT! I'm so happy with this...
+Mayall: But... It's not chocolate or cookies... while I'm SUPER appreciative about this I just want those things...
+Mayall: Thank you so much for serving this anyway! Here's a generous tip from yours truly!
+[signal arg="tip_jar_loved"]
+[signal arg="next_scene"]
+[end_timeline]
+

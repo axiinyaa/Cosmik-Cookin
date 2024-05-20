@@ -1,0 +1,11 @@
+Join malin 2
+malin: Damn, finally, some good looking food!
+malin: Time to dig in.
+malin: (Munch, munch, munch, gulp!)
+malin: Damn, that was pretty good, almost as good as the food back home.
+malin: I think with a little more practice, you could be a pretty good cook.
+malin: Anyway, Goodbye for now, gotta run back to comms. Good luck.
+Leave malin
+[signal arg="tip_jar_liked"]
+[signal arg="next_scene"]
+[end_timeline]

@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://cb7sy5fk4eucp"]
+
+[ext_resource type="Script" path="res://UI/Button.gd" id="1_ycpyc"]
+[ext_resource type="Texture2D" uid="uid://df77pgqctott3" path="res://Textures/Food/Meat.png" id="2_mpkii"]
+[ext_resource type="AudioStream" uid="uid://bs05ujn8csq26" path="res://Audio/cash-register-141427.mp3" id="3_3mye3"]
+[ext_resource type="PackedScene" uid="uid://bs7yfid3k5idm" path="res://UI/tooltip.tscn" id="4_67nt0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ccl8"]
+bg_color = Color(0.6, 0.6, 0.6, 0.266667)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bgptv"]
+font_size = 17
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_il4if"]
+font_size = 25
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Control"]
+custom_minimum_size = Vector2(85, 70)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 20.0
+scale = Vector2(0.057721, 0.0572496)
+script = ExtResource("1_ycpyc")
+
+[node name="Panel" type="Button" parent="."]
+layout_mode = 0
+offset_right = 87.0
+offset_bottom = 105.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ccl8")
+
+[node name="ItemName" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.332712
+anchor_right = 1.0101
+anchor_bottom = 1.33271
+offset_right = 1.52588e-05
+text = "30 Bolt(s)"
+label_settings = SubResource("LabelSettings_bgptv")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Amount" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.398269
+anchor_top = -0.499068
+anchor_right = 1.40837
+anchor_bottom = 0.500932
+offset_right = 1.52588e-05
+text = "10
+"
+label_settings = SubResource("LabelSettings_il4if")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_right = 87.0
+offset_bottom = 87.0
+mouse_filter = 2
+texture = ExtResource("2_mpkii")
+expand_mode = 1
+
+[node name="CashRegisterSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3mye3")
+volume_db = -10.6
+
+[node name="ToolTip" parent="." instance=ExtResource("4_67nt0")]
+custom_minimum_size = Vector2(0, 0)
+offset_left = 34.6494
+offset_top = -52.4021
+offset_right = 35.1494
+offset_bottom = -10.4021
+
+[connection signal="mouse_entered" from="Panel" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_exited" from="Panel" to="." method="_on_panel_mouse_exited"]
+[connection signal="pressed" from="Panel" to="." method="on_button_pressed"]

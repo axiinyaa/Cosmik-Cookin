@@ -1,0 +1,19 @@
+Join Mayall 2
+Mayall: *Gasp* Are those cookies?
+Mayall: YES! I'm so happy..!
+Mayall: (Om, nom, nom, nom)
+[i]You realize Mayall is tearing up.
+Mayall: [shake](So... many... years... and finally...)
+Mayall: Sorry... I just haven't had these in forever and I just missed them so much.
+Mayall: Thank you, I'll leave a little gift in the kitchen for you!
+Leave Mayall
+[i]She drops a strange condiment sprinkler in the kitchen.
+Join Mayall 2
+Mayall: It's [wave][color=light_blue]Starbit Sprinkles![/color][/wave] They'll make any food absolutely impeccable..!
+Mayall: I've kept it hidden until now until someone gave me such great food...
+Mayall: Thank you so much! I gotta go now!
+Mayall: Bye!
+Leave Mayall
+[signal arg="finished"]
+[signal arg="andromeda_tip_jar"]
+[end_timeline]

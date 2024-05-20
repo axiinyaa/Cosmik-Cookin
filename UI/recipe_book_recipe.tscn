@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccf5ikctgv8jr"]
+
+[ext_resource type="Script" path="res://RecipeBookRecipe.gd" id="1_y2qlv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_q6fxa"]
+font_size = 41
+
+[sub_resource type="LabelSettings" id="LabelSettings_710hs"]
+font_size = 26
+
+[node name="RecipeBookRecipe" type="Control" node_paths=PackedStringArray("l_title", "l_recipe")]
+custom_minimum_size = Vector2(1000, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y2qlv")
+l_title = NodePath("Title")
+l_recipe = NodePath("Recipe")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 27.0
+offset_top = 24.0
+offset_right = 368.0
+offset_bottom = 108.0
+text = "Title"
+label_settings = SubResource("LabelSettings_q6fxa")
+
+[node name="Recipe" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 26.0
+offset_top = 82.0
+offset_right = 367.0
+offset_bottom = 166.0
+text = "Title"
+label_settings = SubResource("LabelSettings_710hs")

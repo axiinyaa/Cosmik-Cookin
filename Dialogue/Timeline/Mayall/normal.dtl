@@ -1,0 +1,42 @@
+Join Mayall 2
+[label name="question"]
+Mayall: Hey! What's up? I'm happy to listen!
+- About Andromeda
+	Mayall: You want to know something about Andromeda?
+	Mayall: Answer this first!
+	Mayall: Do you think Andromeda enjoys Chocolate?
+	- Yes
+		Mayall: Ah. Hm. Anyway...
+	- No
+		Mayall: Yeah, she doesn't actually!
+		Mayall: And since you answered correctly...
+		Mayall: Andromeda [wave]REALLY[/wave] loves cheese on her sandwiches!
+		Mayall: Teehee... can't wait for the look on her face once you make that..!
+		Mayall: In a good way! I never want to trick my friends... I mean crewmates like that!
+		Mayall: *Ahem* Anyway...
+- About Malin
+	Mayall: Oooh. You want to know something about Malin?
+	Mayall: Ah, answer this first!
+	Mayall: What is her favourite food?
+	- Tomato Soup
+		Mayall: Correct! And now for the secrets of Malin...
+		Mayall: So secret and dark... are you ready?
+		Mayall: She loves fresh basil on her soup!
+		Mayall: Yup! Can't get enough of it! Anyway...
+	- Bagel Sandwiches
+		Mayall: She does like it but... it's not her favourite.
+		Mayall: Better luck next time!
+- Chocolate?
+	Mayall: Chocolate is made from a Cacao Bean with Sugar.
+	Mayall: Yup! Some dude told me how to make it while I was buying the Cacao bean earlier..!
+	Mayall: Somehow I think he was grossly oversimplifying it...
+	[jump label="question"]
+- I'm Okay.
+	Mayall: Alright! See you later!
+	[signal arg="Mayall_show_character"]
+	Leave Mayall
+	[end_timeline]
+Mayall: Alright! See you later!
+[signal arg="Mayall_show_character"]
+Leave Mayall
+[end_timeline]

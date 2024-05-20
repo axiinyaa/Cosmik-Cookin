@@ -1,0 +1,15 @@
+Join Mayall 2
+Mayall: Oh hey! What's that?
+Mayall: Oh my gosh! That looks good!
+Mayall: Now if you don't mind...
+Mayall: (Om, nom, nom, nom)
+Mayall: [wave]YES! I was right..!
+Mayall: But... it's not perfect...
+Mayall: I'm absolutely sure if you experiment more you can make this [shake]EVEN BETTER.
+Mayall: But thank you so much for serving this! Anything's better than frozen food, well, almost!
+Mayall: Bye bye!
+Leave Mayall
+[signal arg="tip_jar_liked"]
+[signal arg="next_scene"]
+[end_timeline]
+

@@ -1,0 +1,11 @@
+Join Mayall 2
+Mayall: Oh... Um...
+Mayall: Ahh...
+Mayall: Okay fine! I'll eat it!
+Mayall: (Om, nom, nom, nom)
+Mayall: [shake]Ooh... I think I'm going to be sick...
+Leave Mayall
+[i]Mayall promptly leaves to go to the bathroom, and doesn't come back for the day.
+[signal arg="hated_food"]
+[signal arg="next_scene"]
+[end_timeline]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyolw6xrb5xnj"]
+
+[ext_resource type="Shader" path="res://HueShift.gdshader" id="1_ryckq"]
+[ext_resource type="Texture2D" uid="uid://dptaellwk2jk6" path="res://Textures/Cooker/Dynamic Components/CookerSlotOne.png" id="2_coad0"]
+[ext_resource type="Script" path="res://UI/Cooker Slot/cooker_slot.gd" id="3_dkubw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ch0lg"]
+resource_local_to_scene = true
+shader = ExtResource("1_ryckq")
+shader_parameter/is_on = false
+shader_parameter/is_on_green = false
+shader_parameter/is_on_red = null
+
+[node name="CookerSlot" type="Sprite2D"]
+material = SubResource("ShaderMaterial_ch0lg")
+texture = ExtResource("2_coad0")
+script = ExtResource("3_dkubw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -239.0
+offset_top = -257.0
+offset_right = -95.0
+offset_bottom = -134.0
+expand_mode = 1

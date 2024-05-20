@@ -1,0 +1,15 @@
+Join Andromeda 2
+Andromeda: That looks... questionable?
+Andromeda: Ah well, time for a taste test!
+Andromeda: (Chew, munch munch, gulp!)
+Andromeda: Groan... (My stomach! I can’t feel my stomach!)
+Andromeda: That was…
+Andromeda: Uh...
+Andromeda: Something...
+Andromeda: I'm sure you can figure out something...[pause] tastier! Next time..!
+Andromeda: Bye for now I guess..!
+Leave Andromeda
+[signal arg="next_scene"]
+[signal arg="hated_food"]
+[end_timeline]
+

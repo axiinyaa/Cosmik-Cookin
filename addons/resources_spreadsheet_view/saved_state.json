@@ -1,0 +1,1 @@
+{ "recent_paths": ["res://Objects/", "res://Objects/Items/"], "hidden_columns": { "res://Objects/": {  }, "res://Objects/Items/": { "resource_name": true, "resource_local_to_scene": true, "resource_path": true } } }

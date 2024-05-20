@@ -1,0 +1,21 @@
+Join Andromeda 2
+Andromeda: Time for a taste test rookie!
+Andromeda: (Chew, munch munch, gulp!)
+Andromeda: Hey this is some good stuff!
+Andromeda: Maybe hiring a cook to replace me was a good idea after all.
+Andromeda: (Not to mention no dish washing for me!)
+Andromeda: Thanks for the food. Here you go!
+[signal arg="andromeda_tip_jar"]
+[wait time="3.0"]
+Andromeda: I know it's a pretty large tip, but it's just to get you started.
+Andromeda: The reason being is that you do have to use those [color=orange]Bolts[/color] to buy ingredients from now on.
+Andromeda: But, as long as you serve good food to the crew I don't think running out of them will be a problem!
+Andromeda: I’ll go tell the others to quit hiding out on you, keep up the good work!
+Andromeda: Oh! And one more thing. We can't always be available, things can get very busy..!
+[signal arg="show_timeskip"]
+Andromeda: But! If you click on the [color=orange]Skip to Next Hour[/color] on the top right, you can quickly move on to the next person who is available!
+Andromeda: But anyway, gotta go, thanks for serving me!
+Leave Andromeda
+[signal arg="malin_section"]
+[end_timeline]
+

@@ -1,0 +1,31 @@
+Join Andromeda 2
+if {current_section} == "malin":
+	Andromeda: Hey rookie! Thanks for the sandwich earlier. I do hope that Malin isn’t giving you too much trouble. They mean well though!
+Andromeda: So... what's up?
+- I need help.
+	if {current_section} == "malin":
+		Andromeda: Tomato soup you say? Ah sure. There was once a very old cookbook found in one of the cupboards deep inside the ship’s kitchen.
+		Andromeda: If I remember correctly for tomato soup… you gotta include vegetables in there somewhere. Just to thicken it up and give it flavour, you know?
+		Andromeda: As for the cookbook, I had Mayall keep it but she accidentally left it at some spaceport when we were buying the same 3 frozen meals…
+		Andromeda: Suppose she was too excited over the possibility of real food and wanted to use it as a grocery list or something…
+		Andromeda: But we forgive them, and at least we have you to make good food for us!
+	if {current_section} == "mayall":
+		Andromeda: Ah... Chocolate? I'm not the biggest fan of sweet things. But I think with a slight bit of [color=orange]salt[/color] in it, it's something I can tolerate!
+		Andromeda: Just kind of balances the sweetness, y'know?
+	if {current_section} == "mayall 2":
+		Andromeda: Cookies? I do remember a recipe my mom taught me a long time ago. Not sure if I exactly remember it though.
+		Andromeda: Well, I do know that you have to combine [color=orange]Chocolate and Butter[/color] but the middle ingredient I cannot remember at all.
+		Andromeda: Sorry about that... but I do believe that you can fill in the blanks!
+- I'm doing okay.
+	Andromeda: Oh, yeah that’s fine. Don’t be afraid to ask for help if you need it though!
+
+if {current_section} == "malin":
+	[wait time="0.5"]
+	Andromeda: Wait, before you go… There’s something I found in the ship’s storage. I think it’s something you want, so here you go!
+	[signal arg="andromeda_basil"]
+	[i]Andromeda gives you [color=orange]3 Fresh Basil[/color].
+	Andromeda: Don’t waste it all. I’m sure it’ll be very useful to you!
+Leave Andromeda
+[signal arg="Andromeda_show_character"]
+[end_timeline]
+
